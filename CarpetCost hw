@@ -1,0 +1,41 @@
+// Jake Arseneau 2/5/2015
+// Software Design 1
+// Forest Baulieu   
+
+import java.util.Scanner;
+public class CarpetCost
+{
+	public static void main(String[]args)
+	{
+			// here I call the scanner object for our method
+		Scanner scanner1= new Scanner(System.in);
+		
+			// here I gather the inputs, iLength, iWidth, and iPrice
+		System.out.println("Enter length in feet: ");
+		double iLength = scanner1.nextInt();
+		
+		System.out.println("Enter the width in feet: ");
+		double iWidth = scanner1.nextInt();
+		
+		System.out.println("Enter the price of the carpet (per sq. yard): ");
+		double iPrice = scanner1.nextInt();
+		
+		
+			// Here we print the output to the receipt
+		System.out.println("  ---  Jake's Carpet Emporium  ---  ");
+		System.out.println(); 
+		System.out.printf("%-20s %15.2f %n", "Total Length (ft):", iLength);
+		System.out.printf("%-20s %15.2f %n", "Total Width (ft):", iWidth);
+		System.out.printf("%-20s %15.2f %n", "Area (sq. yard):", ((iLength*iWidth)/3));
+			// to convert from feet to yards I divide the area by 3 above
+			// The computation for Area (iLength*iWidth)/3) is reused below
+		System.out.printf("%-20s %15.2f %n", "Total Cost:", (((iLength*iWidth)/3)*iPrice)); 
+		System.out.printf("%-20s %15.2f %n", "5% Sales Tax:", (((iLength*iWidth)/3)*iPrice*0.05));
+		System.out.printf("%-20s %15.2f %n", "Total (with Tax):", (((iLength*iWidth)/3)*iPrice*0.05) + (((iLength*iWidth)/3)*iPrice));
+		System.out.println();
+		System.out.println("   All transactions are in USD");
+		System.out.println("   THANK YOU HAVE A NICE DAY");		
+		
+	}
+	
+}
