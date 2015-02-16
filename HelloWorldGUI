@@ -1,0 +1,18 @@
+HelloWorldGUI 
+
+import javax.swing.JOptionPane;
+public class HelloWorld
+{
+	public static void main(String[]args)
+	{
+	
+		String firstName;
+		String GUIMessage;
+		
+		
+		firstName = JOptionPane.showInputDialog("Enter your first name:");
+		GUIMessage = String.format("Hello, %s,\n Welcome to my world!", firstName);
+		JOptionPane.showMessageDialog(null, GUIMessage);
+	}
+	
+}
