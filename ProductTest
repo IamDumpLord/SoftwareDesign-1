@@ -1,0 +1,97 @@
+//Driver for Product class
+import java.util.Scanner;
+public class ProductTest
+{
+	public static void main(String[]args)
+	{
+		Scanner input = new Scanner(System.in);
+		Product aProduct = new Product(); //here we create an aProduct method for the main class(?)
+		Product bProduct = new Product();
+		Product cProduct = new Product();
+		
+		System.out.println("Please enter the following information for each item.\nPress enter after each peice of info, afterwards you\nwill be prompted to add an additional item. ");
+		
+		System.out.println("enter the name, price, and stock of the first product.");
+		
+		aProduct.setProdName(input.next());
+		aProduct.setProdPrice(input.nextDouble());
+		aProduct.setProdStock(input.nextInt());
+		
+		
+		System.out.println("enter the name, price, and stock of the second product.");
+		
+		bProduct.setProdName(input.next());
+		bProduct.setProdPrice(input.nextDouble());
+		bProduct.setProdStock(input.nextInt());
+		
+		
+		System.out.println("enter the name, price, and stock of the third product.");
+		
+		cProduct.setProdName(input.next());
+		cProduct.setProdPrice(input.nextDouble());
+		cProduct.setProdStock(input.nextInt());
+		
+		
+				//aProduct.setProdName("Dorritos");
+				//bProduct.setProdName("Avacado");
+				//cProduct.setProdName("Tangerines");
+		
+		System.out.printf("The inventory contains:\nName:\t\t%s\t\t%s\t\t%s",	aProduct.getProdName(), bProduct.getProdName(), cProduct.getProdName());
+		System.out.printf("\nPrice:\t\t%3.2f\t\t%3.2f\t\t%3.2f",				aProduct.getProdPrice(), bProduct.getProdPrice(), cProduct.getProdPrice());
+		System.out.printf("\nStock:\t\t%d\t\t%d\t\t%d",						aProduct.getProdStock(), bProduct.getProdStock(), cProduct.getProdStock());
+
+	}
+}
+
+
+
+
+
+// java Product constructor class 
+
+public class Product
+{
+	private String prodName;
+	private double prodPrice;
+	private int prodStock;
+	
+	public Product(){} //designates constructor for Product
+	
+	
+	
+	//getters and setters for prodName
+	public String getProdName() //prodName get method so other classes can access prodName
+	{
+		return this.prodName;
+	}
+	public void setProdName(String name)
+	{
+		this.prodName = name;
+	}
+	
+	
+	//getters and setters for prodPrice
+	public double getProdPrice()
+	{
+		return this.prodPrice;
+	}
+	public void setProdPrice(double price)
+	{
+		this.prodPrice = price;
+	}
+			//public void discountProd(int newPrice)
+			//{
+			//	this.prodPrice =
+			//}
+	
+	//getters and setters for prodStock
+	public int getProdStock()
+	{
+		return this.prodStock;
+	}
+	public void setProdStock(int stock)
+	{
+		this.prodStock = stock;
+	}
+
+
