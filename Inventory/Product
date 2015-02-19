@@ -1,0 +1,65 @@
+// Jake Arseneau
+// Software Design I
+// 2/18/15
+// Forrest Baulieu
+
+//Constructor Class for Product
+
+public class Product
+{
+	//declare variables
+	private String prodName;
+	private double prodPrice;
+	private int prodStock;
+	
+	//designates constructor for Product
+	public Product(){} 
+	
+	
+	//get & set for prodName
+	public String getProdName()
+	{
+		return this.prodName;
+	}
+	public void setProdName(String name)
+	{
+		this.prodName = name;
+	}
+	
+	
+	//get & set for prodPrice
+	public double getProdPrice()
+	{
+		return this.prodPrice;
+	}
+	public void setProdPrice(double price)
+	{
+		this.prodPrice = price;
+	}
+	public void discountPrice(double discount)
+	//this subtracts the discount from the prodPrice
+	{
+		this.prodPrice = prodPrice - (prodPrice * discount);
+		//the console input is a percentile in decimal form
+	}
+	
+	
+	//get & set for prodStock
+	public int getProdStock()
+	{
+		return this.prodStock;
+	}
+	public void setProdStock(int stock)
+	{
+		this.prodStock = stock;
+	}
+	public void printProdInfo()
+	//prints the variables with a tab between each for readability
+	{
+		System.out.printf("%s\t%3.2f\t%d\n", prodName, prodPrice, prodStock);
+	}
+	
+	
+	
+	
+}//END of Product Class
