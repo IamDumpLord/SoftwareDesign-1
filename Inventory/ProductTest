@@ -1,0 +1,68 @@
+// Jake Arseneau
+// Software Design I
+// 2/18/15
+// Forrest Baulieu
+
+//Driver for Product class
+
+import java.util.Scanner;
+public class ProductTest
+{
+	public static void main(String[]args)
+	{
+		//here I create the input object and instantiate the Product constructor twice
+		Scanner input = new Scanner(System.in);
+		Product aProduct = new Product(); 
+		Product bProduct = new Product();
+		
+		//instructions for the user to enter info one at a time
+		System.out.println("Please enter the following information for each item."
+				+ "\nPress enter after each peice of info, afterwards you"
+				+ "\nwill be prompted to add an additional item. ");
+		System.out.println(); //line space
+		
+		//here I call the methods to set the name, price, and stock # of the first item
+		System.out.println("enter the name, price, and number in stock of the first product.");
+		aProduct.setProdName(input.next());
+		aProduct.setProdPrice(input.nextDouble());
+		aProduct.setProdStock(input.nextInt());
+		System.out.println(); //line space
+		
+		//here I call the methods to set the name, price, and stock # of the second item
+		System.out.println("enter the name, price, and number in stock of the second product.");
+		bProduct.setProdName(input.next());
+		bProduct.setProdPrice(input.nextDouble());
+		bProduct.setProdStock(input.nextInt());
+		System.out.println(); //line space
+		
+		//first two lines and last line provide formatting
+		System.out.println("| Name | Price($) | # in Stock |");
+		System.out.println(); //line space
+		//the printProdInfo method is called for each product, info is 
+		aProduct.printProdInfo();
+		bProduct.printProdInfo();
+		System.out.println(); //line space
+		
+		
+		//the discount percentage should be entered in decimal form
+		//the discountPrice method is called here and returns the final price
+		System.out.println("Enter the discount for item 1 in decimal form (50% = 0.5) If none, enter 0.");
+		aProduct.discountPrice(input.nextDouble());
+		
+		//checks for discount on the second item
+		System.out.println("Enter the discount for item 2 in decimal form (50% = 0.5) If none, enter 0.");
+		bProduct.discountPrice(input.nextDouble());
+		
+		
+		//displays info after discounts are factored in
+		System.out.println(); //line space
+		System.out.println("        DISCOUNTED VALUE        ");
+		System.out.println("| Name | Price($) | # in Stock |");
+		System.out.println(); //line space
+		aProduct.printProdInfo();
+		bProduct.printProdInfo();
+		System.out.println(); //line space
+		
+
+	}
+}
