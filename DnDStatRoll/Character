@@ -1,0 +1,34 @@
+import java.util.Random;
+public class Character 
+{
+	
+	int first;
+	int second;
+	int third;
+	int fourth;
+	int worst;
+	
+	public Character(){}
+	
+	public int generateStats()
+	{
+		first = (int)(Math.random()*6)+1;
+		second = (int)(Math.random()*6)+1;
+		third = (int)(Math.random()*6)+1;
+		fourth = (int)(Math.random()*6)+1;	
+		
+		//finding the worst
+		worst = Math.min(first,Math.min(second,Math.min(third,fourth)));
+		//return the sum of al ldice except the worst
+		return (first+second+third+fourth-worst);
+		
+		
+	}
+	
+	public int printStats()
+	{
+		System.out.printf("%d\n%d\n%d\n%d\n%d",first, second, third, fourth, worst);
+	}
+	 
+	
+}
