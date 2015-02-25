@@ -1,0 +1,13 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class DnDStatRoll
+{
+	public static void main(String[]args)
+	{
+		Character char1 = new Character();
+		
+		char1.generateStats();
+		char1.printStats();
+	}
+}
