@@ -1,0 +1,13 @@
+import java.util.Scanner;
+import java.util.Random;
+
+public class CombinationLock
+{
+	public static void main(String[]args)
+	{
+		IntGenerator generateCom = new IntGenerator();
+		generateCom.setCom1();
+		
+	}
+	
+}
