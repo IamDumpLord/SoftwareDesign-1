@@ -1,0 +1,30 @@
+// Jake Arseneau
+// Software Design I
+// 3/04/15
+// Forrest Baulieu
+
+
+import java.util.Random;
+//constructor Class for IntGenerator
+//will initialize 3 2-digit int
+public class IntGenerator
+{
+	private int com1;
+	private int com2;
+	private int com3;
+	private boolean isLocked;
+	
+	
+	
+	//instatiate IntGenerator constructor
+	public IntGenerator(){}
+	
+	public void setCom1()
+	{
+		this.com1 = (int)(Math.random()*61);
+		this.com2 = (int)(Math.random()*61);
+		this.com3 = (int)(Math.random()*61);
+		System.out.println(com1+" "+com2+" "+com3);
+	}
+	public int
+}
