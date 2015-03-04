@@ -1,12 +1,41 @@
 import java.util.Scanner;
 import java.util.Random;
 
+//driver class
 public class CombinationLock
-{
+{	
 	public static void main(String[]args)
 	{
-		IntGenerator generateCom = new IntGenerator();
-		generateCom.setCom1();
+		//declare variables used in IntGenerator param
+		int first;
+		int second;
+		int third;
+		Scanner input = new Scanner(System.in);
+		
+		
+		//initializes 2 IntGenerator objects
+		IntGenerator comGen1 = new IntGenerator(0,0,0);
+		IntGenerator comGen2 = new IntGenerator(0,0,0);
+		
+		comGen1.promptUser(); //instructs the user on what to do
+		
+		System.out.println("First Combination: ");
+		comGen1.getCom();
+		
+		System.out.println("Second Combination: ");
+		comGen2.getCom();
+		
+		System.out.println("\nTry to unlock the first lock");
+		first = input.nextInt();
+		second = input.nextInt();
+		third = input.nextInt();
+		comGen1.guessCom(first, second, third);
+		
+		System.out.println("\nTry to unlock the second lock");
+		first = input.nextInt();
+		second = input.nextInt();
+		third = input.nextInt();
+		comGen2.guessCom(first, second, third);
 		
 	}
 	
