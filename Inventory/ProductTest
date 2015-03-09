@@ -12,36 +12,17 @@ public class ProductTest
 	{
 		//here I create the input object and instantiate the Product constructor twice
 		Scanner input = new Scanner(System.in);
-		Product aProduct = new Product(); 
-		Product bProduct = new Product();
 		
-		//instructions for the user to enter info one at a time
-		System.out.println("Please enter the following information for each item."
-				+ "\nPress enter after each peice of info, afterwards you"
-				+ "\nwill be prompted to add an additional item. ");
-		System.out.println(); //line space
+		// Product parameters: (prodName, prodPrice, prodStock, prodSKU)
+		Product aProduct = new Product("Avacado", 2.50, 22, 1); 
+		Product bProduct = new Product("Tomato", 3, 10, 11);
 		
-		//here I call the methods to set the name, price, and stock # of the first item
-		System.out.println("enter the name, price, and number in stock of the first product.");
-		aProduct.setProdName(input.next());
-		aProduct.setProdPrice(input.nextDouble());
-		aProduct.setProdStock(input.nextInt());
-		System.out.println(); //line space
-		
-		//here I call the methods to set the name, price, and stock # of the second item
-		System.out.println("enter the name, price, and number in stock of the second product.");
-		bProduct.setProdName(input.next());
-		bProduct.setProdPrice(input.nextDouble());
-		bProduct.setProdStock(input.nextInt());
-		System.out.println(); //line space
-		
-		//first two lines and last line provide formatting
-		System.out.println("| Name | Price($) | # in Stock |");
-		System.out.println(); //line space
-		//the printProdInfo method is called for each product, info is 
-		aProduct.printProdInfo();
-		bProduct.printProdInfo();
-		System.out.println(); //line space
+		//System.out.println("| Name | Price($) | # in Stock |");
+		//System.out.println(); //line space
+		////the printProdInfo method is called for each product, info is 
+		//aProduct.printProdInfo();
+		//bProduct.printProdInfo();
+		//System.out.println(); //line space
 		
 		
 		//the discount percentage should be entered in decimal form
@@ -62,7 +43,3 @@ public class ProductTest
 		aProduct.printProdInfo();
 		bProduct.printProdInfo();
 		System.out.println(); //line space
-		
-
-	}
-}
