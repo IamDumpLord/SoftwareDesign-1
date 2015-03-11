@@ -1,0 +1,13 @@
+```
+
+double[] quarterAverage = new double[4];
+
+for (int i = 0; i < 4; i++)
+{
+  sum = 0;
+  for (int j = 0; j< 3; j++)
+  {
+    sum += rainfall[3*i +j];
+  }
+  quarterAverage[i] = sum / 3.0;
+}
