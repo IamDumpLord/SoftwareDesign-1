@@ -5,80 +5,67 @@
 
 //Constructor Class for Product
 
-public class Product
-{
-	//declare variables
+public class Product{
+
 	private String prodName;
 	private double prodPrice;
 	private int prodStock;
 	private int prodSKU;
 	
-	//designates constructor for Product
-	public Product(String name, double price, int stock, int sku)
-	{
-		prodName = name;
-		prodPrice = price;
-		prodStock = stock;
-		prodSKU = sku;
-		
-		
+	
+	
+	public Product(){ //initialize obj
+		this.prodName = "Beans";
+		this.prodPrice = 9.99;
+		this.prodStock = 5;
+		this.prodSKU = 0;
 	} 
 	
-	
-	//get & set for prodName
-	public String getProdName()
-	{
-		return this.prodName;
+	public Product(String prodName, double prodPrice,
+			int prodStock, int prodSKU){
+		this.prodName = prodName;
+		this.prodPrice = prodPrice;
+		this.prodStock = prodStock;
+		this.prodSKU = prodSKU;
 	}
-	public void setProdName(String name)
-	{
+	
+	
+	public String getProdName(){
+		return this.prodName;	
+	}
+	public void setProdName(String name){
 		this.prodName = name;
 	}
-	
-	
-	//get & set for prodPrice
-	public double getProdPrice()
-	{
+		
+	public double getProdPrice(){
 		return this.prodPrice;
 	}
-	public void setProdPrice(double price)
-	{
+	public void setProdPrice(double price){
 		this.prodPrice = price;
 	}
-	public void discountPrice(double discount)
-	//this subtracts the discount from  prodPrice
-	{
-		this.prodPrice = prodPrice - (prodPrice * discount);
-		//console input is a percentile in decimal form
-	}
 	
-	
-	//get & set for prodStock
-	public int getProdStock()
-	{
+	public int getProdStock(){
 		return this.prodStock;
 	}
-	public void setProdStock(int stock)
-	{
+	public void setProdStock(int stock){
 		this.prodStock = stock;
 	}
-	public void printProdInfo()
-	//prints the variables with a tab between each
-	{
-		System.out.printf("%s\t%3.2f\t%d%3d\n", prodName, prodPrice, prodStock, prodSKU);
-	}
 	
-	
-	public int getProdSKU()
-	{
+	public int getProdSKU(){
 		return this.prodSKU;
 	}
 	
-	public void setProdSKU(int sku)
-	{
+	public void setProdSKU(int sku){
 	this.prodSKU = sku;	
 	}
 	
+	public void discountPrice(double discount){
+		this.prodPrice = prodPrice - (prodPrice * discount);
+	}
 	
-	
+	public void printProdInfo(){
+		System.out.printf("%s\t%3.2f\t%d%3d\n", prodName, prodPrice, prodStock, prodSKU);
+
+		
+	}	
 }//END of Product Class
