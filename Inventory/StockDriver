@@ -1,8 +1,8 @@
 
 public class StockDriver
 {
-	public static void main(String[]args)
-	{
-		Stock stock = new Stock();
+	public static void main(String[]args){
+		
+		
 	}
 }
