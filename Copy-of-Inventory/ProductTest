@@ -1,0 +1,49 @@
+// Jake Arseneau
+// Software Design I
+// 2/18/15
+// Forrest Baulieu
+
+//Driver for Product class
+
+import java.util.Scanner;
+public class ProductTest
+{
+	public static void main(String[]args)
+	{
+		//here I create the input object and instantiate the Product constructor twice
+		Scanner input = new Scanner(System.in);
+		
+		// Product parameters: (prodName, prodPrice, prodStock, prodSKU)
+		Product aProduct = new Product("Avacado", 2.50, 22, 1); 
+		Product bProduct = new Product("Tomato", 3, 10, 11);
+		
+		//System.out.println("| Name | Price($) | # in Stock |");
+		//System.out.println(); //line space
+		////the printProdInfo method is called for each product, info is 
+		//aProduct.printProdInfo();
+		//bProduct.printProdInfo();
+		//System.out.println(); //line space
+		
+		
+		//the discount percentage should be entered in decimal form
+		//the discountPrice method is called here and returns the final price
+		System.out.println("Enter the discount for item 1 in decimal form (50% = 0.5) If none, enter 0.");
+		aProduct.discountPrice(input.nextDouble());
+		
+		//checks for discount on the second item
+		System.out.println("Enter the discount for item 2 in decimal form (50% = 0.5) If none, enter 0.");
+		bProduct.discountPrice(input.nextDouble());
+		
+		
+		//displays info after discounts are factored in
+		System.out.println(); //line space
+		System.out.println("        DISCOUNTED VALUE        ");
+		System.out.println("| Name | Price($) | # in Stock |");
+		System.out.println(); //line space
+		aProduct.printProdInfo();
+		bProduct.printProdInfo();
+		System.out.println(); //line space
+		
+
+	}
+}
